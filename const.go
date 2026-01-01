@@ -24,9 +24,10 @@ const (
 	_nodeStartByte         = "ts_node_start_byte"
 	_nodeEndByte           = "ts_node_end_byte"
 	_nodeIsError           = "ts_node_is_error"
+	_nodeIsNull            = "ts_node_is_null"
 )
 
-var _functions = [23]string{
+var _functions = [24]string{
 	_malloc,
 	_free,
 	_strlen,
@@ -50,6 +51,7 @@ var _functions = [23]string{
 	_nodeEndByte,
 	_nodeStartByte,
 	_nodeIsError,
+	_nodeIsNull,
 }
 
 var _languages = []string{

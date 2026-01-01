@@ -20,9 +20,14 @@ func (t *Tree) RootNode() (*Node, error) {
 		return nil, fmt.Errorf("allocating node: %w", err)
 	}
 
-	_, err = t.ts.call(_treeRootNode, nodePtr[0], t.t)
+	// Capture return values to debug WASM calling convention
+	retVals, err := t.ts.call(_treeRootNode, nodePtr[0], t.t)
 	if err != nil {
 		return nil, fmt.Errorf("getting tree root node: %w", err)
 	}
+
+	// Debug: Log return values
+	fmt.Fprintf(t.ts.out, "DEBUG: ts_tree_root_node returned %d values: %v\n", len(retVals), retVals)
+
 	return newNode(t.ts, nodePtr[0]), nil
 }

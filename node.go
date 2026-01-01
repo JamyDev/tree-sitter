@@ -62,6 +62,14 @@ func (n *Node) IsError() (bool, error) {
 	return res[0] == 1, nil
 }
 
+func (n *Node) IsNull() (bool, error) {
+	res, err := n.ts.call(_nodeIsNull, n.ptr)
+	if err != nil {
+		return false, fmt.Errorf("getting node is null: %w", err)
+	}
+	return res[0] == 1, nil
+}
+
 func (n *Node) StartByte() (uint64, error) {
 	res, err := n.ts.call(_nodeStartByte, n.ptr)
 	if err != nil {

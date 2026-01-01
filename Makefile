@@ -65,6 +65,7 @@ build:
 			-Wl,--export=ts_node_start_byte \
 			-Wl,--export=ts_node_end_byte \
 			-Wl,--export=ts_node_is_error \
+			-Wl,--export=ts_node_is_null \
 			-Wl,--export=tree_sitter_bash \
 			-Wl,--export=tree_sitter_c \
 			-Wl,--export=tree_sitter_cpp \
