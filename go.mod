@@ -1,4 +1,4 @@
-module github.com/malivvan/tree-sitter
+module github.com/JamyDev/tree-sitter
 
 go 1.23.4
 
