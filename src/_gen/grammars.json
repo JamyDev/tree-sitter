@@ -104,9 +104,9 @@
     "files": [
       "parser.c"
     ],
-    "reference": "master",
-    "revision": "7cb21a65af6cc8e5c6742b9dba42881ea1158475",
-    "updateBasedOn": "commit"
+    "reference": "v0.25.0",
+    "revision": "2346a3ab1bb3857b48b29d779a1ef9799a248cd7",
+    "updateBasedOn": "tag"
   },
   {
     "language": "groovy",
